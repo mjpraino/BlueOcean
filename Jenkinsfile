@@ -8,7 +8,7 @@ pipeline {
       }
       stage('Upload to AWS') {
         steps {
-          withAWS(region:'us-west-2', credentials:'BlueOcean') {
+          withAWS(region:'us-west-2', credentials:'292152339671') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'ha-udacity-webapp-deployment')
           }
         }
